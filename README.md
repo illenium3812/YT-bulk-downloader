@@ -27,7 +27,7 @@ print(get_python_lib())
 
 ## How to use
 
-cd the project folder run this command: **python YT-bulk-downloader.py **"Your Label you want to extract videos"**
+cd the project folder run this command: python YT-bulk-downloader.py **"Your Label you want to extract videos"**
 
 ### Example:
 ```
