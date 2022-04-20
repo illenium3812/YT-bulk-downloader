@@ -33,5 +33,6 @@ cd the project folder run this command: python YT-bulk-download.py **"Your Label
 ```
 python YT-bulk-download.py "welding"
 ```
-![image](https://user-images.githubusercontent.com/41062288/164055664-38583edc-0411-45a9-b7f2-54bbd16266f5.png)
+![image](https://user-images.githubusercontent.com/41062288/164191410-13d96496-703e-4422-8242-c2f22b8681cc.png)
+
 
