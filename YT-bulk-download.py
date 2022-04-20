@@ -19,7 +19,8 @@ def read_csv(PATH,label):
 
     for i in range(len(lables)):
         if label in lables[i]:
-            l.append(lables[i] + "," + f'https://www.youtube.com/watch?v={youtube_ids[i]}' + "," + str(time_start[i]) + "," + str(time_end[i]))    
+            l.append(lables[i] + "," + f'https://www.youtube.com/watch?v={youtube_ids[i]}' + "," + str(time_start[i]) + "," + str(time_end[i]))
+    print(f'{len(l)} links found against this activity label')    
     return l
 
 def clip(path,file_name,start_time,end_time):
