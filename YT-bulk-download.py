@@ -49,6 +49,9 @@ def downloadVideo(urls,label):
     
 if __name__ == "__main__":
     LABEL = sys.argv[1]
+    urls = read_csv('train.csv',LABEL)
+    if len(urls) == 0:
+        sys.exit("System Exiting")
     try:
         os.mkdir(f'{LABEL} videos')
     except:
@@ -57,5 +60,4 @@ if __name__ == "__main__":
         os.mkdir(f'{LABEL} videos\\clipped')
     except:
         pass
-    urls = read_csv('train.csv',LABEL)
     downloadVideo(urls,LABEL)
