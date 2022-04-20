@@ -31,7 +31,7 @@ cd the project folder run this command: python YT-bulk-downloader.py **"Your Lab
 
 ### Example:
 ```
-python YT-bulk-downloader.py welding
+python YT-bulk-download.py welding
 ```
 ![image](https://user-images.githubusercontent.com/41062288/164055664-38583edc-0411-45a9-b7f2-54bbd16266f5.png)
 
