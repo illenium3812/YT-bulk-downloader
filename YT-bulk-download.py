@@ -1,6 +1,7 @@
 # importing the module 
 import sys
 import os
+import shutil
 import pandas as pd
 from moviepy.editor import *
 import pytube 
@@ -44,7 +45,12 @@ def downloadVideo(urls,label):
             video = youtube.streams.get_highest_resolution()
             print(f'Downloading {video.title} | size = {video.filesize/1000000} mb')
             video.download(filename = f'{PATH}\\{remove_special_characters(video.title)}.mp4')
-            clip(PATH,remove_special_characters(video.title),int(url.split(',')[2]),int(url.split(',')[3]))
+            if youtube.length > 10:
+                clip(PATH,remove_special_characters(video.title),int(url.split(',')[2]),int(url.split(',')[3]))
+            else:
+                original = f'{PATH}\\{remove_special_characters(video.title)}.mp4'
+                target = f'{PATH}\\clipped\\{remove_special_characters(video.title)}.mp4'
+                shutil.copyfile(original, target)
         except Exception as e: print(e)
     
 if __name__ == "__main__":
